@@ -1,8 +1,8 @@
 @echo off
-::set INSTALL_FILE={{filename}}
-::set DEPLOY_LOCATION={{deploy_folder}}
-set INSTALL_FILE=%1
-set DEPLOY_LOCATION=%2
+set INSTALL_FILE={{filename}}
+set DEPLOY_LOCATION={{deploy_folder}}
+::set INSTALL_FILE=%1
+::set DEPLOY_LOCATION=%2
 
 echo %INSTALL_FILE%
 echo %DEPLOY_LOCATION%

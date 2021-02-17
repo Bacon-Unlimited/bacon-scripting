@@ -1,0 +1,1 @@
+Get-WmiObject Win32_process -filter 'name = "Python.exe"' | foreach-object { $_.SetPriority(64) }

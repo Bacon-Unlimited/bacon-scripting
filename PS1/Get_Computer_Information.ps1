@@ -1,0 +1,1 @@
+Get-WmiObject -class Win32_OperatingSystem | fl -Property PSComputerName,Caption,Version,BuildNumber,OSArchitecture

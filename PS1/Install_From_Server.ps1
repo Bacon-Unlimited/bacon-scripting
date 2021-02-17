@@ -1,5 +1,5 @@
-$INSTALL_FILE = $args[0]
-$DEPLOY_LOCATION = $args[1]
+$INSTALL_FILE = {{Application_to_Install}}
+$DEPLOY_LOCATION = {{Local_Tmp_Location}}
 
 Write-Output "The file to copy: " $INSTALL_FILE
 Write-Output "The destination location: " $DEPLOY_LOCATION
