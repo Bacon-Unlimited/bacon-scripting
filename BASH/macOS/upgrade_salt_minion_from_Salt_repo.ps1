@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ################################################################################
 #  
 #  Bacon Unlimited
@@ -17,9 +19,9 @@
 #  from Bacon Unlimited.
 ################################################################################
 
-# Downloads the Salt EXE installer directly from Salt's repo - requires Internet access on minion
-$target_salt_version = "3002.6"
+# Downloads the Salt pkg installer directly from Salt's repo - requires Internet access on minion
+target_salt_version="3002.6"
 
-salt-call cp.get_url "https://repo.saltproject.io/windows/Salt-Minion-$target_salt_version-Py3-AMD64-Setup.exe" "C:\temp\SaltInstall_$target_salt_version.exe" makedirs=True source_hash="https://repo.saltproject.io/windows/Salt-Minion-$target_salt_version-Py3-AMD64-Setup.exe.sha256"
+/opt/salt/bin/salt-call cp.get_url "https://repo.saltproject.io/osx/salt-${target_salt_version}-py3-x86_64.pkg" "/tmp/SaltInstall_${target_salt_version}.pkg" makedirs=True source_hash="https://repo.saltproject.io/osx/salt-${target_salt_version}-py3-x86_64.pkg.sha256"
 
-Start-Process -FilePath "C:\temp\SaltInstall_$target_salt_version.exe" -ArgumentList "/S"
+/usr/sbin/installer -pkg "/tmp/SaltInstall_${target_salt_version}.pkg" -target LocalSystem >/dev/null 2>&1 &
