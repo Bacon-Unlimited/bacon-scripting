@@ -27,4 +27,4 @@
 # cmd.run requires an additional parameter to denote the templating engine 
 # you're using in the command, which is why we add template=jinja to the end of the line.
 
-salt-call cmd.run "ls -lah /Users/{{ salt['grains.get']('bacon_user:current_user', '') }}" template=jinja
+/opt/salt/bin/salt-call cmd.run "ls -lah /Users/{{ salt['grains.get']('bacon_user:current_user', '') }}" template=jinja
