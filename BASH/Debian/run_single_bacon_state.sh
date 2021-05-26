@@ -32,13 +32,13 @@
 
 # If you want a script that only ever applies a single state, you can use
 # this example:
-/opt/salt/bin/salt-call state.apply bacon.states.Ubuntu.install-chrome_18
+salt-call state.apply bacon.states.Ubuntu.install-chrome_18
 
 # If you want to specify which state to apply when executing the script,
 # you could use one of these two alternatives instead:
 
 # Alternative method to accept a command line argument for the state name
-# /opt/salt/bin/salt-call state.apply $1
+# salt-call state.apply $1
 
 # Alternative method to accept a template variable for the state name
-# /opt/salt/bin/salt-call state.apply {{state}}
+# salt-call state.apply {{state}}
