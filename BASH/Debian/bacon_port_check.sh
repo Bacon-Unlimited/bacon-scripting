@@ -7,7 +7,7 @@ fqdn=$1
 check_timer=$2
 
 # Bacon Ports
-declare -a port_array=("4505" "4506" "4507")
+declare -a port_array=("4505" "4506" "4507" "4508")
 
 
 # Do all for listed ports
